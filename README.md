@@ -1,10 +1,10 @@
 <div align="center">
-  <img alt="fish-eza" src="./assets/logo.png" height="200" />
+  <img alt="fish-fd" src="./assets/logo.png" height="200" />
 </div>
 
 # fish-fd
 
-A `fd` plugin for the Fish shell.
+An `fd` plugin for the Fish shell.
 
 ### Installation
 
@@ -16,9 +16,7 @@ fisher install givensuman/fish-fd
 
 ### Usage
 
-Replaces `find` with an `fd` wrapper. To run the normal `find` command, use `rfind`.
-
-### Environment variables
+Replaces `find` with `fd`. To run the normal `find` command, use `rfind`.
 
 | Variable  | Description                            | Default                            |
 | --------- | -------------------------------------- | ---------------------------------- |
@@ -26,14 +24,13 @@ Replaces `find` with an `fd` wrapper. To run the normal `find` command, use `rfi
 
 ### Aliases
 
-```shell
-alias fd  'fd $fd_params'
-alias fda 'fd $fd_params --no-ignore' # Search all files not in .gitignore
-alias fdd 'fd $fd_params --type d'    # Find directories only
-alias fdf 'fd $fd_params --type f'    # Find files only
-alias fdx 'fd $fd_params --type x'    # Find executables only
-alias fde 'fd $fd_params --extension' # Find by extension
-```
+| Alias | Command          | Description                |
+| ----- | ---------------- | -------------------------- |
+| fda   | `fd --no-ignore` | Find all files             |
+| fdd   | `fd --type d`    | Find directories only      |
+| fde   | `fd --extension` | Find files by extension    |
+| fdf   | `fd --type f`    | Find regular files only    |
+| fdx   | `fd --type x`    | Find executable files only |
 
 ### Requirements
 
